@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Outra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Outra</h2>
+
+Viewbag.fruta = @ViewBag.fruta
+<br />
+ViewData["carne"] = @ViewData["carne"]
+<br />
+TempData["sobremesa"] = @TempData["sobremesa"]
+<br />
+
+@Html.ActionLink("ir para o index", "Index")

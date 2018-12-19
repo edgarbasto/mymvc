@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Alunos</h1>
+<br />
+<h2>Jantar</h2>
+<div class="form-group">
+    <label for="txtfruta">Fruta:</label>
+    <input type="text" id="txtfruta" value=@ViewBag.fruta name="txtfruta" />
+</div>
+<br />
+
+
+@{  var comida = ViewData["carne"] as string;}
+<div class="form-group">
+    @Html.Label("lblcarne", "Carnuncha:")
+    @Html.TextBox("txtcarne", comida, new { @class = "form-control", onclick = "alert('xpto')" })
+    @*tb podia adicionar type="Number"*@
+</div>
+<br />
+
+<div class="form-group">
+    @Html.Label("lblsobremesa", "SOBRE A MESA:")
+    @Html.TextBox("txtsobremesa", TempData["sobremesa"], new { @class = "form-control" })
+</div>
+<br />
+
+@Html.ActionLink("ir para a outra", "Outra")
+
+
+<p>soma= @(2 + 3) </p>
+
+@{
+    var x = 23 * 5;
+    @:Istec
+    <p>xpto2</p>
+    <br />
+    @:debito do codigo x=@x
+}
+
+<p>a variável x: @(x)</p>
+<br />
+
+<table class="table table-bordered table-responsive table-striped">
+    <thead>
+        <tr>
+            <td>Valor de I:</td>
+            <td>Dobro de I:</td>
+        </tr>
+    </thead>
+
+    @for (int i = 0; i < 10; i++)
+    {
+        <tr>
+            <td>@i</td>
+            <td>@(2 * i)</td>
+        </tr>
+    }
+</table>
+
+
+<br />
+
+@{ int alfa = 8;}
+@if (alfa > 10)
+{
+    <h1>Maior: @alfa</h1>
+} else
+{
+    <h1>Menor: @alfa</h1>
+}
+
+
+
+
+
+
